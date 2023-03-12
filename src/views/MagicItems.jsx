@@ -14,9 +14,10 @@ export default function MagicItems() {
     };
     fetchData();
   }, []);
-  console.log("MAGIC ITEMS", items);
-  if (loading) return <h1>loading...</h1>;
 
+  // console.log("MAGIC ITEMS", items);
+
+  if (loading) return <h1>loading...</h1>;
   return (
     <div className="magic-items">
       <h1>Magic Items</h1>
