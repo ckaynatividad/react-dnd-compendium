@@ -5,7 +5,10 @@ export default function Home() {
   return (
     <div>
       Home
-      <Link to="/nekos">Nekos</Link>
+      <nav>
+        <Link to="/magic-items">Magic Items</Link>
+        <Link to="/classes">Classes</Link>
+      </nav>
     </div>
   );
 }
