@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function MagicItemsCard({ props }) {
+export default function ClassesCard({ props }) {
   return <div>{props.name}</div>;
 }

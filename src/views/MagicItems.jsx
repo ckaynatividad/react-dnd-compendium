@@ -10,9 +10,9 @@ export default function MagicItems() {
     const fetchData = async () => {
       const data = await getMagicItems();
       setItems(data);
-      setLoading(false);
     };
     fetchData();
+    setLoading(false);
   }, []);
 
   // console.log("MAGIC ITEMS", items);
@@ -22,7 +22,7 @@ export default function MagicItems() {
     <div className="magic-items">
       <h1>Magic Items</h1>
       {items.map((item, i) => (
-        <MagicItemsCard key={i} items={item} />
+        <MagicItemsCard key={i} props={item} />
       ))}
     </div>
   );
