@@ -1,7 +1,7 @@
 export async function getMagicItems() {
   const resp = await fetch("https://www.dnd5eapi.co/api/magic-items");
   const data = await resp.json();
-  return data;
+  return data.results;
 }
 
 export async function getClasses() {
