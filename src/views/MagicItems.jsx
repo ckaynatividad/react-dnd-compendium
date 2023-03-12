@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import MagicItemsCard from "../components/MagicItemsCard";
+import NameCard from "../components/NameCard";
 import { getMagicItems } from "../services/api";
 
 export default function MagicItems() {
@@ -22,7 +22,7 @@ export default function MagicItems() {
     <div className="magic-items">
       <h1>Magic Items</h1>
       {items.map((item, i) => (
-        <MagicItemsCard key={i} props={item} />
+        <NameCard key={i} props={item} />
       ))}
     </div>
   );

@@ -11,10 +11,11 @@ function App() {
       <BrowserRouter>
         <Nav />
         <Routes>
-          <Route exact path="/" element={<Home />}></Route>
-          <Route exact path="/classes" element={<Classes />}></Route>
-          <Route exact path="/magic-items" element={<MagicItems />}></Route>
-          <Route exact path="/:weapon"></Route>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/classes" element={<Classes />} />
+          <Route exact path="/magic-items" element={<MagicItems />} />
+          <Route exact path="/:magic-item" />
+          <Route exact path="/:class" />
         </Routes>
       </BrowserRouter>
     </div>

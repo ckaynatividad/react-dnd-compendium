@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ClassesCard from "../components/ClassesCard";
+import NameCard from "../components/NameCard";
 import { getClasses } from "../services/api";
 
 export default function Classes() {
@@ -22,7 +22,7 @@ export default function Classes() {
     <div>
       <h1>Classes</h1>
       {classes.map((classes, i) => (
-        <ClassesCard key={i} props={classes} />
+        <NameCard key={i} props={classes} />
       ))}
     </div>
   );
