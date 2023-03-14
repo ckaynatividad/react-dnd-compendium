@@ -3,18 +3,22 @@ import { useParams } from "react-router-dom";
 import { getMagicItem } from "../services/api";
 
 export default function MagicItem() {
-  const { params } = useParams();
+  const { magicItem } = useParams();
   const [item, setItem] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getMagicItem(params);
+      const data = await getMagicItem(magicItem);
       setItem(data);
     };
     fetchData();
-  }, [params]);
+  }, [magicItem]);
 
+  console.log(magicItem);
   console.log(item);
-
-  return <div>{params}</div>;
+  return (
+    <div>
+      <span>{item.name}</span>
+    </div>
+  );
 }
