@@ -9,7 +9,7 @@ export default function MagicItems() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getMagicItem("");
+      const data = await getMagicItem();
       setItems(data.results);
     };
     fetchData();

@@ -9,13 +9,13 @@ export default function Subclasses() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getSubclass("");
+      const data = await getSubclass();
       setSubclasses(data.results);
     };
     fetchData();
     setLoading(false);
   }, []);
-  console.log(subclasses);
+
   return (
     <div>
       Subclasses
