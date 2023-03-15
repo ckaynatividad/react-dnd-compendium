@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import NameCard from "../components/NameCard";
 import { getClass } from "../services/api";
 
@@ -32,7 +32,9 @@ export default function Class() {
       <h3>Subclasses</h3>
       <span>
         {subclass.map((i) => (
-          <NameCard props={i} />
+          <Link to={`/subclasses/${i.index}`}>
+            <NameCard props={i} />
+          </Link>
         ))}
       </span>
     </div>

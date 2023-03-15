@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import MagicItemCard from "../components/MagicItemCard";
 import { getMagicItem } from "../services/api";
 
 export default function MagicItem() {
   const { magicItem } = useParams();
   const [item, setItem] = useState({});
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -12,11 +14,15 @@ export default function MagicItem() {
       setItem(data);
     };
     fetchData();
+    setLoading(false);
   }, [magicItem]);
 
-  return (
+  console.log(item);
+  return loading ? (
+    <h1>loading...</h1>
+  ) : (
     <div>
-      <span>{item.name}</span>
+      <MagicItemCard props={item} />
     </div>
   );
 }
