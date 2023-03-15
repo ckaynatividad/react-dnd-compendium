@@ -16,8 +16,6 @@ export default function MagicItems() {
     setLoading(false);
   }, []);
 
-  // console.log("MAGIC ITEMS", items);
-
   if (loading) return <h1>loading...</h1>;
   return (
     <div className="magic-items">

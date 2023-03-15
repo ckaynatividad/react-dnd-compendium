@@ -14,8 +14,6 @@ export default function MagicItem() {
     fetchData();
   }, [magicItem]);
 
-  // console.log(magicItem);
-  // console.log(item);
   return (
     <div>
       <span>{item.name}</span>

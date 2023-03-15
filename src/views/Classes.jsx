@@ -16,8 +16,6 @@ export default function Classes() {
     setLoading(false);
   }, []);
 
-  // console.log("CLASSES", classes);
-
   return loading ? (
     <h1>LOADING...</h1>
   ) : (

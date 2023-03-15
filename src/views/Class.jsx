@@ -16,8 +16,6 @@ export default function Class() {
     fetchData();
   }, [classItem]);
 
-  console.log("CLASS", classes);
-
   return (
     <div className="classView">
       <span>{classes.name}</span>
