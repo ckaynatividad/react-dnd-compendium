@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import NameCard from "../components/NameCard";
-import { getMagicItems } from "../services/api";
+import { getMagicItem } from "../services/api";
 
 export default function MagicItems() {
   const [items, setItems] = useState([]);
@@ -9,8 +9,8 @@ export default function MagicItems() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getMagicItems();
-      setItems(data);
+      const data = await getMagicItem("");
+      setItems(data.results);
     };
     fetchData();
     setLoading(false);
