@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import NameCard from "../components/NameCard";
 import { getClasses } from "../services/api";
 
@@ -22,7 +23,9 @@ export default function Classes() {
     <div>
       <h1>Classes</h1>
       {classes.map((classes, i) => (
-        <NameCard key={i} props={classes} />
+        <Link to={`/classes/${classes.index}`} key={classes.index}>
+          <NameCard key={i} props={classes} />
+        </Link>
       ))}
     </div>
   );
