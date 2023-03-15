@@ -22,7 +22,9 @@ export default function MagicItems() {
       <h1>Magic Items</h1>
       {items.map((item) => (
         <Link to={`/magic-items/${item.index}`} key={item.index}>
-          <NameCard props={item} />{" "}
+          <h3>
+            <NameCard props={item} />{" "}
+          </h3>
         </Link>
       ))}
     </div>

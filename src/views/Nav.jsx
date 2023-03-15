@@ -7,6 +7,7 @@ export default function Nav() {
       <Link to="/">Home</Link>
       <Link to="/magic-items">Magic Items</Link>
       <Link to="/classes">Classes</Link>
+      <Link to="/subclasses">Subclasses</Link>
     </nav>
   );
 }
