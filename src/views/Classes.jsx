@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import NameCard from "../components/NameCard";
-import { getClasses } from "../services/api";
+import { getClass } from "../services/api";
 
 export default function Classes() {
   const [classes, setClasses] = useState([]);
@@ -9,8 +9,8 @@ export default function Classes() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getClasses();
-      setClasses(data);
+      const data = await getClass("");
+      setClasses(data.results);
     };
     fetchData();
     setLoading(false);
@@ -18,8 +18,9 @@ export default function Classes() {
 
   // console.log("CLASSES", classes);
 
-  if (loading) return <h1>loading....</h1>;
-  return (
+  return loading ? (
+    <h1>LOADING...</h1>
+  ) : (
     <div>
       <h1>Classes</h1>
       {classes.map((classes, i) => (
