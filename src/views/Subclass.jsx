@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import SubclassCard from "../components/SubclassCard";
 import { getSubclass } from "../services/api";
 
 export default function Subclass() {
@@ -15,5 +16,9 @@ export default function Subclass() {
   }, [subclass]);
 
   //   console.log(subclasses);
-  return <div>{subclasses.name}</div>;
+  return (
+    <div>
+      <SubclassCard props={subclasses} key={subclasses.index} />
+    </div>
+  );
 }

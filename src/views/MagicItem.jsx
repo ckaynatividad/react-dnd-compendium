@@ -22,7 +22,7 @@ export default function MagicItem() {
     <h1>loading...</h1>
   ) : (
     <div>
-      <MagicItemCard props={item} />
+      <MagicItemCard props={item} key={item.index} />
     </div>
   );
 }

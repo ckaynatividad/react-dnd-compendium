@@ -16,7 +16,9 @@ export default function Subclasses() {
     setLoading(false);
   }, []);
 
-  return (
+  return loading ? (
+    <h2>loading...</h2>
+  ) : (
     <div>
       Subclasses
       {subclasses.map((item) => (
