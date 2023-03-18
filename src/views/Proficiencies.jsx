@@ -4,7 +4,7 @@ import NameCard from "../components/NameCard";
 import { getProficiencies } from "../services/api";
 
 export default function Proficiencies() {
-  const [prof, setProf] = useState([]);
+  const [profs, setProf] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -14,13 +14,12 @@ export default function Proficiencies() {
     fetchData();
   }, []);
 
-  console.log(prof);
   return (
     <div>
       Proficiencies
-      {prof.map((i) => (
-        <Link to={`/proficiencies/${i.index}`}>
-          <NameCard props={i} />
+      {profs.map((prof, i) => (
+        <Link to={`/proficiencies/${prof.index}`} key={i}>
+          <NameCard props={prof} />
         </Link>
       ))}
     </div>

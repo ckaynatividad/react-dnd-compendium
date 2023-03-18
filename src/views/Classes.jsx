@@ -22,9 +22,9 @@ export default function Classes() {
     <div>
       <h1>Classes</h1>
       {classes.map((classes, i) => (
-        <Link to={`/classes/${classes.index}`} key={classes.index}>
+        <Link to={`/classes/${classes.index}`} key={i}>
           <h3>
-            <NameCard key={i} props={classes} />
+            <NameCard props={classes} />
           </h3>
         </Link>
       ))}

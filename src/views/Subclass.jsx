@@ -15,10 +15,9 @@ export default function Subclass() {
     fetchData();
   }, [subclass]);
 
-  //   console.log(subclasses);
   return (
     <div>
-      <SubclassCard props={subclasses} key={subclasses.index} />
+      <SubclassCard subclasses={subclasses} key={subclasses.index} />
     </div>
   );
 }

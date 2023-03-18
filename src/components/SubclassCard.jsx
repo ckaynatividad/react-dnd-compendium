@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function SubclassCard({ props }) {
+export default function SubclassCard({ subclasses }) {
   return (
     <div>
-      <span>{props.name}</span>
-      <span>{props.subclass_flavor}</span>
-      <span>{props.desc}</span>
+      <span>{subclasses.name}</span>
+      <span>{subclasses.subclass_flavor}</span>
+      <span>{subclasses.desc}</span>
     </div>
   );
 }

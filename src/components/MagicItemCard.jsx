@@ -1,11 +1,17 @@
 import React from "react";
 
-export default function MagicItemCard({ props }) {
+export default function MagicItemCard({ item, desc }) {
+  const [typeRarity, ...rest] = desc;
+
   return (
     <div>
-      <p>Name: {props.name}</p>
-      <p>Desc: {props.desc ? props.desc[0].split(/[)$]/)[0] + ")" : ""}</p>
-      <p>Rarity: {props.rarity?.name}</p>
+      <p>Name: {item.name}</p>
+      <h3>Type, Rarity:</h3>
+      <p>{typeRarity}</p>
+      <h3>Desc</h3>
+      {rest.map((desc, i) => (
+        <p key={i}>{desc}</p>
+      ))}
     </div>
   );
 }

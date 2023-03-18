@@ -21,7 +21,7 @@ export default function Class() {
 
   return (
     <div className="classView">
-      <ClassCard classes={classes} profs={classProf} subClasses={subclass} />
+      <ClassCard classes={classes} profs={classProf} subclasses={subclass} />
     </div>
   );
 }

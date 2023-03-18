@@ -18,7 +18,7 @@ export default function Proficiency() {
     };
     fetchData();
   }, [proficiency]);
-  console.log(prof);
+
   return (
     <div>
       <ProficiencyCard prof={prof} classes={classes} races={races} />

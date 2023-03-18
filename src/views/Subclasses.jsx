@@ -21,9 +21,9 @@ export default function Subclasses() {
   ) : (
     <div>
       Subclasses
-      {subclasses.map((item) => (
-        <Link to={`/subclasses/${item.index}`}>
-          <NameCard props={item} />
+      {subclasses.map((classes, i) => (
+        <Link to={`/subclasses/${classes.index}`} key={i}>
+          <NameCard props={classes} />
         </Link>
       ))}
     </div>

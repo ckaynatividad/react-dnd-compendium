@@ -20,10 +20,10 @@ export default function MagicItems() {
   return (
     <div className="magic-items">
       <h1>Magic Items</h1>
-      {items.map((item) => (
-        <Link to={`/magic-items/${item.index}`} key={item.index}>
+      {items.map((item, i) => (
+        <Link to={`/magic-items/${item.index}`} key={i}>
           <h3>
-            <NameCard props={item} />{" "}
+            <NameCard props={item} />
           </h3>
         </Link>
       ))}
