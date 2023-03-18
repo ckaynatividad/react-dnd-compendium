@@ -9,19 +9,21 @@ export default function Subclasses() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getSubclass("");
-      setSubclasses(data.results);
+      const data = await getSubclass();
+      setSubclasses(data);
     };
     fetchData();
     setLoading(false);
   }, []);
-  console.log(subclasses);
-  return (
+
+  return loading ? (
+    <h2>loading...</h2>
+  ) : (
     <div>
       Subclasses
-      {subclasses.map((item) => (
-        <Link to={`/subclasses/${item.index}`}>
-          <NameCard props={item} />
+      {subclasses.map((classes, i) => (
+        <Link to={`/subclasses/${classes.index}`} key={i}>
+          <NameCard props={classes} />
         </Link>
       ))}
     </div>
