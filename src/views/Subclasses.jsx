@@ -10,7 +10,7 @@ export default function Subclasses() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await getSubclass();
-      setSubclasses(data.results);
+      setSubclasses(data);
     };
     fetchData();
     setLoading(false);

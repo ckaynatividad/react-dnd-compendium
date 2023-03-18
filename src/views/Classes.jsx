@@ -10,7 +10,7 @@ export default function Classes() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await getClass();
-      setClasses(data.results);
+      setClasses(data);
     };
     fetchData();
     setLoading(false);

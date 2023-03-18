@@ -8,6 +8,7 @@ export default function Nav() {
       <Link to="/magic-items">Magic Items</Link>
       <Link to="/classes">Classes</Link>
       <Link to="/subclasses">Subclasses</Link>
+      <Link to="/proficiencies">Proficiencies</Link>
     </nav>
   );
 }
