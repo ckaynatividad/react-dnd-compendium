@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import NameCard from "../components/NameCard";
+import { useParams } from "react-router-dom";
+import ClassCard from "../components/ClassCard";
 import { getClass } from "../services/api";
 
 export default function Class() {
@@ -21,22 +21,7 @@ export default function Class() {
 
   return (
     <div className="classView">
-      <span>{classes.name}</span>
-      <span>{classes.hit_die}</span>
-      <h3>Proficiencies</h3>
-      <span className="classProf">
-        {classProf.map((i) => (
-          <NameCard props={i} />
-        ))}
-      </span>
-      <h3>Subclasses</h3>
-      <span>
-        {subclass.map((i) => (
-          <Link to={`/subclasses/${i.index}`}>
-            <NameCard props={i} />
-          </Link>
-        ))}
-      </span>
+      <ClassCard classes={classes} profs={classProf} subClasses={subclass} />
     </div>
   );
 }
