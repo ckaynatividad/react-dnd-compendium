@@ -29,3 +29,9 @@ export async function getProficiencies(prof = "") {
   const data = await resp.json();
   return prof ? data : data.results;
 }
+
+export async function getRaces(race = "") {
+  const resp = await fetch(`https://www.dnd5eapi.co/api/races/${race}`);
+  const data = await resp.json();
+  return race ? data : data.results;
+}
