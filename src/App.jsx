@@ -10,6 +10,8 @@ import Subclasses from "./views/Subclasses";
 import Subclass from "./views/Subclass";
 import Proficiencies from "./views/Proficiencies";
 import Proficiency from "./views/Proficiency";
+import Races from "./views/Races";
+import Race from "./views/Race";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path="/magic-items/:magicItem" element={<MagicItem />} />
           <Route path="/proficiencies" element={<Proficiencies />} />
           <Route path="/proficiencies/:proficiency" element={<Proficiency />} />
+          <Route path="/races" element={<Races />} />
+          <Route path="/races/:race" element={<Race />} />
         </Routes>
       </BrowserRouter>
     </div>

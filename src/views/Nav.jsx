@@ -9,6 +9,7 @@ export default function Nav() {
       <Link to="/classes">Classes</Link>
       <Link to="/subclasses">Subclasses</Link>
       <Link to="/proficiencies">Proficiencies</Link>
+      <Link to="/races">Races</Link>
     </nav>
   );
 }
