@@ -13,6 +13,6 @@ export default function Race() {
     };
     fetchData();
   }, [race]);
-  //   console.log(races);
+  // console.log(races);
   return <div>{races.name}</div>;
 }

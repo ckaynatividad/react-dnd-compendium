@@ -8,6 +8,11 @@ export default function Class() {
   const [classes, setClasses] = useState({});
   const [classProf, setClassProf] = useState([]);
   const [subclass, setSubclass] = useState([]);
+  const [multiClass, setMultiClass] = useState({});
+  const [startEquip, setStartEquip] = useState([]);
+  const [equipOptions, setEquipOptions] = useState([]);
+  const [profChoices, setProfChoices] = useState([]);
+  const [saveThrows, setSaveThrows] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,6 +23,8 @@ export default function Class() {
     };
     fetchData();
   }, [classItem]);
+
+  // console.log("CLASS", classes);
 
   return (
     <div className="classView">

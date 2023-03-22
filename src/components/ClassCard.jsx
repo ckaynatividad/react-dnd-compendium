@@ -6,7 +6,7 @@ export default function ClassCard({ classes, profs, subclasses }) {
   return (
     <div>
       <p>Name: {classes.name}</p>
-      <p>Desc: {classes.hit_die}</p>
+      <p>Hit Die: {classes.hit_die}</p>
       <h3>Proficiencies</h3>
       {profs.map((prof, i) => (
         <Link to={`/proficiencies/${prof.index}`} key={i}>
@@ -14,11 +14,13 @@ export default function ClassCard({ classes, profs, subclasses }) {
         </Link>
       ))}
       <h3>Subclasses</h3>
-      {subclasses.map((classes, i) => (
-        <Link to={`/subclasses/${subclasses.index}`} key={i}>
-          <NameCard props={subclasses} />
-        </Link>
-      ))}
+      {subclasses.length === 0
+        ? "None"
+        : subclasses.map((subClass, i) => (
+            <Link to={`/subclasses/${subClass.index}`} key={i}>
+              <NameCard props={subClass} />
+            </Link>
+          ))}
     </div>
   );
 }

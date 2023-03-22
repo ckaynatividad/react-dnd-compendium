@@ -10,13 +10,20 @@ export default function ProficiencyCard({ prof, classes, races }) {
       <p>{prof.type}</p>
       <h3>Classes</h3>
       {classes.length === 0
-        ? classes.map((classItem, i) => (
+        ? "None"
+        : classes.map((classItem, i) => (
             <Link to={`/classes/${classItem.index}`} key={i}>
               <NameCard props={classItem} />
             </Link>
-          ))
-        : "None"}
+          ))}
       <h3>Races</h3>
+      {races.length === 0
+        ? "None"
+        : races.map((race, i) => (
+            <Link to={`/races/${race.index}`} key={i}>
+              <NameCard props={race} />
+            </Link>
+          ))}
       {races.map((race, i) => (
         <Link key={i}>
           <NameCard props={races} />
