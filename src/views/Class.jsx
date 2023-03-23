@@ -20,6 +20,11 @@ export default function Class() {
       setClasses(data);
       setClassProf(data.proficiencies);
       setSubclass(data.subclasses);
+      setMultiClass(data.multi_classing);
+      setStartEquip(data.starting_equipment);
+      setEquipOptions(data.starting_equipment_options);
+      setProfChoices(data.proficiency_choices);
+      setSaveThrows(data.saving_throws);
     };
     fetchData();
   }, [classItem]);
