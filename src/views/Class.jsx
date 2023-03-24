@@ -29,11 +29,20 @@ export default function Class() {
     fetchData();
   }, [classItem]);
 
-  // console.log("CLASS", classes);
-
+  console.log("CLASS", classes);
+  // console.log(profChoices);
   return (
     <div className="classView">
-      <ClassCard classes={classes} profs={classProf} subclasses={subclass} />
+      <ClassCard
+        classes={classes}
+        profs={classProf}
+        subclasses={subclass}
+        multiClass={multiClass}
+        startEquip={startEquip}
+        equipOptions={equipOptions}
+        profChoices={profChoices}
+        saveThrows={saveThrows}
+      />
     </div>
   );
 }
