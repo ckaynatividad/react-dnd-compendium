@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import NameCard from "../components/NameCard";
-import { getEqCategories } from "../services/api";
+import NameCard from "../../components/NameCard";
+import { getEqCategories } from "../../services/api";
 
 export default function EquipmentCategories() {
   const [categories, setCategories] = useState([]);

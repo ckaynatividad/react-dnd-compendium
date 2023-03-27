@@ -14,7 +14,7 @@ export default function ClassCard({
 }) {
   return (
     <div>
-      <p>Name: {classes.name}</p>
+      <h3>Name: {classes.name}</h3>
       <p>Hit Die: {classes.hit_die}</p>
       <h3>Proficiencies</h3>
       {profs.map((prof, i) => (

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import NameCard from "../components/NameCard";
-import { getSubclass } from "../services/api";
+import NameCard from "../../components/NameCard";
+import { getSubclass } from "../../services/api";
 
 export default function Subclasses() {
   const [subclasses, setSubclasses] = useState([]);

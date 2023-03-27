@@ -6,7 +6,7 @@ export default function MagicItemCard({ item, desc }) {
 
   return (
     <div>
-      <p>Name: {item.name}</p>
+      <h3>Name: {item.name}</h3>
       <h3>Equipment Category:</h3>
       <Link to={`/equipment-categories/${item.equipment_category?.index}`}>
         <p>{item.equipment_category?.name}</p>

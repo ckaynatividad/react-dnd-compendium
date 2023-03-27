@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ClassCard from "../components/ClassCard";
-import { getClass } from "../services/api";
+import ClassCard from "../../components/ClassCard";
+import { getClass } from "../../services/api";
 
 export default function Class() {
   const { classItem } = useParams();

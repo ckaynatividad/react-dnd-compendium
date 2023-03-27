@@ -5,7 +5,7 @@ import NameCard from "./NameCard";
 export default function ProficiencyCard({ prof, classes, races }) {
   return (
     <div>
-      <p>{prof.name}</p>
+      <h3>{prof.name}</h3>
       <h3>Type</h3>
       <p>{prof.type}</p>
       <h3>Classes</h3>

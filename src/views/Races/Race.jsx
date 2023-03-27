@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import RacesCard from "../components/RacesCard";
-import { getRaces } from "../services/api";
+import RacesCard from "../../components/RacesCard";
+import { getRaces } from "../../services/api";
 
 export default function Race() {
   const { race } = useParams();

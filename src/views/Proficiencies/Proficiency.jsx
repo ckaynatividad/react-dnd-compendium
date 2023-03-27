@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ProficiencyCard from "../components/ProficiencyCard";
-import { getProficiencies } from "../services/api";
+import { getProficiencies } from "../../services/api";
+import ProficiencyCard from "../../components/ProficiencyCard";
 
 export default function Proficiency() {
   const { proficiency } = useParams();

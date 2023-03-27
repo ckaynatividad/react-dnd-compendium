@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import CategoryCard from "../components/CategoryCard";
-import { getEqCategories } from "../services/api";
+import CategoryCard from "../../components/CategoryCard";
+import { getEqCategories } from "../../services/api";
 
 export default function Category() {
   const { category } = useParams();

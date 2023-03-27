@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import NameCard from "../components/NameCard";
-import { getProficiencies } from "../services/api";
+import NameCard from "../../components/NameCard";
+import { getProficiencies } from "../../services/api";
 
 export default function Proficiencies() {
   const [profs, setProf] = useState([]);
