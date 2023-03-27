@@ -3,9 +3,9 @@ import React from "react";
 export default function SubclassCard({ subclasses }) {
   return (
     <div>
-      <span>{subclasses.name}</span>
-      <span>{subclasses.subclass_flavor}</span>
-      <span>{subclasses.desc}</span>
+      <h3>{subclasses.name}</h3>
+      <p>{subclasses.subclass_flavor}</p>
+      <p>{subclasses.desc}</p>
     </div>
   );
 }

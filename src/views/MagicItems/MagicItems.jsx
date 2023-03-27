@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import NameCard from "../components/NameCard";
-import { getMagicItem } from "../services/api";
+import NameCard from "../../components/NameCard";
+import { getMagicItem } from "../../services/api";
 
 export default function MagicItems() {
   const [items, setItems] = useState([]);

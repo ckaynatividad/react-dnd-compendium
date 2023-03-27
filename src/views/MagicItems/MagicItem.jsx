@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import MagicItemCard from "../components/MagicItemCard";
-import { getMagicItem } from "../services/api";
+import MagicItemCard from "../../components/MagicItemCard";
+import { getMagicItem } from "../../services/api";
 
 export default function MagicItem() {
   const { magicItem } = useParams();
