@@ -19,7 +19,7 @@ export default function MagicItem() {
     setLoading(false);
   }, [magicItem]);
 
-  console.log(item);
+  // console.log(item.equipment_category);
   return loading ? (
     <h1>loading...</h1>
   ) : (

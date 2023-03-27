@@ -14,7 +14,7 @@ export default function EquipmentCategories() {
     };
     fetchData();
   }, []);
-  console.log(categories);
+
   return (
     <div>
       {categories.map((cat, i) => (

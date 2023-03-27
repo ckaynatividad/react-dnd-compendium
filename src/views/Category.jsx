@@ -18,7 +18,6 @@ export default function Category() {
     fetchData();
   }, [category]);
 
-  console.log(cat);
   return (
     <div>
       <CategoryCard cat={cat} equipment={equipment} />
