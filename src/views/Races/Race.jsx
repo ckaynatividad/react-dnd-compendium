@@ -21,7 +21,6 @@ export default function Race() {
     fetchData();
   }, [race]);
 
-  // console.log(races);
   return (
     <div>
       <RacesCard races={races} lang={lang} ability={ability} traits={traits} />

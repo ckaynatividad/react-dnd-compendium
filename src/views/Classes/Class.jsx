@@ -29,8 +29,6 @@ export default function Class() {
     fetchData();
   }, [classItem]);
 
-  console.log("CLASS", classes);
-  // console.log(profChoices);
   return (
     <div className="classView">
       <ClassCard
