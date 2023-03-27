@@ -35,3 +35,11 @@ export async function getRaces(race = "") {
   const data = await resp.json();
   return race ? data : data.results;
 }
+
+export async function getEqCategories(category = "") {
+  const resp = await fetch(
+    `https://www.dnd5eapi.co/api/equipment-categories/${category}`
+  );
+  const data = await resp.json();
+  return category ? data : data.results;
+}

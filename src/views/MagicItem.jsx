@@ -19,6 +19,7 @@ export default function MagicItem() {
     setLoading(false);
   }, [magicItem]);
 
+  console.log(item);
   return loading ? (
     <h1>loading...</h1>
   ) : (

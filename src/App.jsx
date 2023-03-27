@@ -12,6 +12,8 @@ import Proficiencies from "./views/Proficiencies";
 import Proficiency from "./views/Proficiency";
 import Races from "./views/Races";
 import Race from "./views/Race";
+import EquipmentCategories from "./views/EquipmentCategories";
+import Category from "./views/Category";
 
 function App() {
   return (
@@ -30,6 +32,14 @@ function App() {
           <Route path="/proficiencies/:proficiency" element={<Proficiency />} />
           <Route path="/races" element={<Races />} />
           <Route path="/races/:race" element={<Race />} />
+          <Route
+            path="/equipment-categories"
+            element={<EquipmentCategories />}
+          />
+          <Route
+            path="/equipment-categories/:category"
+            element={<Category />}
+          />
         </Routes>
       </BrowserRouter>
     </div>
