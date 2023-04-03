@@ -25,18 +25,23 @@ function App() {
           {/* Classes */}
           <Route path="/classes" element={<Classes />} />
           <Route path="/classes/:classItem" element={<Class />} />
+
           {/* Subclasses */}
           <Route path="/subclasses" element={<Subclasses />} />
           <Route path="/subclasses/:subclass" element={<Subclass />} />
+
           {/* Magic Items */}
           <Route path="/magic-items" element={<MagicItems />} />
           <Route path="/magic-items/:magicItem" element={<MagicItem />} />
+
           {/* Proficiencies */}
           <Route path="/proficiencies" element={<Proficiencies />} />
           <Route path="/proficiencies/:proficiency" element={<Proficiency />} />
+
           {/* Races */}
           <Route path="/races" element={<Races />} />
           <Route path="/races/:race" element={<Race />} />
+
           {/* Equipment */}
           <Route
             path="/equipment-categories"

@@ -5,7 +5,6 @@ import { getMagicItem } from "../../services/api";
 
 export default function MagicItems() {
   const [items, setItems] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -13,10 +12,8 @@ export default function MagicItems() {
       setItems(data);
     };
     fetchData();
-    setLoading(false);
   }, []);
 
-  if (loading) return <h1>loading...</h1>;
   return (
     <div className="magic-items">
       <h1>Magic Items</h1>
