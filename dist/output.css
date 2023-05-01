@@ -575,25 +575,12 @@ video {
   display: flex;
 }
 
-.flex-col {
-  flex-direction: column;
-}
-
 .justify-center {
   justify-content: center;
 }
 
 .justify-around {
   justify-content: space-around;
-}
-
-.bg-\[\#bada55\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(186 218 85 / var(--tw-bg-opacity));
-}
-
-.bg-\[default\] {
-  background-color: default;
 }
 
 .bg-default {

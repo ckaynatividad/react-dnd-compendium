@@ -13,7 +13,7 @@ import Proficiencies from "./views/Proficiencies/Proficiencies";
 import Races from "./views/Races/Races";
 import Proficiency from "./views/Proficiencies/Proficiency";
 import Category from "./views/Equipment/Category";
-import ClassView from "./views/Classes/ClassView";
+import Class from "./views/Classes/Class";
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
           <Route path="/" element={<Home />} />
           {/* Classes */}
           <Route path="/classes" element={<Classes />} />
-          <Route path="/classes/:classItem" element={<ClassView />} />
+          <Route path="/classes/:classItem" element={<Class />} />
 
           {/* Subclasses */}
           <Route path="/subclasses" element={<Subclasses />} />

@@ -10,19 +10,20 @@ export default function Classes() {
     const fetchData = async () => {
       const data = await getClass();
       setClasses(data);
-      console.log(data);
     };
     fetchData();
   }, []);
 
-  <div>
-    <h1>Classes</h1>
-    {classes.map((classes, i) => (
-      <Link to={`/classes/${classes.index}`} key={i}>
-        <h3>
-          <NameCard props={classes} />
-        </h3>
-      </Link>
-    ))}
-  </div>;
+  return (
+    <div>
+      <h1>Classes</h1>
+      {classes.map((classes, i) => (
+        <Link to={`/classes/${classes.index}`} key={i}>
+          <h3>
+            <NameCard props={classes} />
+          </h3>
+        </Link>
+      ))}
+    </div>
+  );
 }
