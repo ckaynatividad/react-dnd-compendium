@@ -7,7 +7,6 @@ export default function MagicItem() {
   const { magicItem } = useParams();
   const [item, setItem] = useState({});
   const [desc, setDesc] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,12 +15,9 @@ export default function MagicItem() {
       setDesc(data.desc);
     };
     fetchData();
-    setLoading(false);
   }, [magicItem]);
 
-  return loading ? (
-    <h1>loading...</h1>
-  ) : (
+  return (
     <div>
       <MagicItemCard item={item} desc={desc} />
     </div>

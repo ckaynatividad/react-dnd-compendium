@@ -5,7 +5,6 @@ import { getClass } from "../../services/api";
 
 export default function Classes() {
   const [classes, setClasses] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -13,12 +12,9 @@ export default function Classes() {
       setClasses(data);
     };
     fetchData();
-    setLoading(false);
   }, []);
 
-  return loading ? (
-    <h1>LOADING...</h1>
-  ) : (
+  return (
     <div>
       <h1>Classes</h1>
       {classes.map((classes, i) => (

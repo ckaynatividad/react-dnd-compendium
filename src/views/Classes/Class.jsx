@@ -30,7 +30,7 @@ export default function Class() {
   }, [classItem]);
 
   return (
-    <div className="classView">
+    <div className="flex flex-column justify-center">
       <ClassCard
         classes={classes}
         profs={classProf}

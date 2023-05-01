@@ -5,7 +5,6 @@ import { getSubclass } from "../../services/api";
 
 export default function Subclasses() {
   const [subclasses, setSubclasses] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -13,12 +12,9 @@ export default function Subclasses() {
       setSubclasses(data);
     };
     fetchData();
-    setLoading(false);
   }, []);
 
-  return loading ? (
-    <h2>loading...</h2>
-  ) : (
+  return (
     <div>
       Subclasses
       {subclasses.map((classes, i) => (
