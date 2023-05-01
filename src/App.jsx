@@ -6,7 +6,6 @@ import MagicItem from "./views/MagicItems/MagicItem";
 import Race from "./views/Races/Race";
 import EquipmentCategories from "./views/Equipment/EquipmentCategories";
 import Classes from "./views/Classes/Classes";
-import Class from "./views/Classes/Class";
 import Subclasses from "./views/Subclasses/Subclasses";
 import Subclass from "./views/Subclasses/Subclass";
 import MagicItems from "./views/MagicItems/MagicItems";
@@ -14,17 +13,18 @@ import Proficiencies from "./views/Proficiencies/Proficiencies";
 import Races from "./views/Races/Races";
 import Proficiency from "./views/Proficiencies/Proficiency";
 import Category from "./views/Equipment/Category";
+import ClassView from "./views/Classes/ClassView";
 
 function App() {
   return (
-    <div className="App">
+    <div className="text-center">
       <BrowserRouter>
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
           {/* Classes */}
           <Route path="/classes" element={<Classes />} />
-          <Route path="/classes/:classItem" element={<Class />} />
+          <Route path="/classes/:classItem" element={<ClassView />} />
 
           {/* Subclasses */}
           <Route path="/subclasses" element={<Subclasses />} />

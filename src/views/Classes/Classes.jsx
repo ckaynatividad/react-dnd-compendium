@@ -10,6 +10,7 @@ export default function Classes() {
     const fetchData = async () => {
       const data = await getClass();
       setClasses(data);
+      console.log(data);
     };
     fetchData();
   }, []);

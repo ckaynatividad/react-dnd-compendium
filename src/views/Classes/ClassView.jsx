@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import ClassCard from "../../components/ClassCard";
 import { getClass } from "../../services/api";
 
-export default function Class() {
+export default function ClassView() {
   const { classItem } = useParams();
   const [classes, setClasses] = useState({});
   const [classProf, setClassProf] = useState([]);
@@ -30,7 +30,7 @@ export default function Class() {
   }, [classItem]);
 
   return (
-    <div className="classView">
+    <div className="flex">
       <ClassCard
         classes={classes}
         profs={classProf}
