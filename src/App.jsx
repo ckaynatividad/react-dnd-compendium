@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
+import "./index.css";
 import Home from "./views/Main/Home";
 import Nav from "./views/Main/Nav";
 import MagicItem from "./views/MagicItems/MagicItem";
